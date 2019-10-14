@@ -26,9 +26,11 @@ public final class Main {
     public static final Random RND = new Random();
 
     public static void main(String[] args) {
-
+        // Constante
+        final char LETRA_INI = 'A';
+        final char LETRA_FIN = 'Z';
         // Generar dato
-        char letra = (char)(RND.nextInt(122 - 97 + 1) + 97);
+        char letra = (char)(RND.nextInt(LETRA_FIN - LETRA_INI + 1) + LETRA_INI);
 
         System.out.printf("Letra de inicio de examen .:  %c.%n", letra);
     }
