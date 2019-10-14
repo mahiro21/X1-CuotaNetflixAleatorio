@@ -26,12 +26,14 @@ public final class Main {
     public static final Random RND = new Random();
 
     public static void main(String[] args) {
-        // Constante
-        final char LETRA_INI = 'A';
-        final char LETRA_FIN = 'Z';
+        // Constantes y variables
+        final double CUOTA_MIN = 0;
+        final double CUOTA_MAX = 30;
+        double CUOTA_A = RND.nextDouble() * (CUOTA_MAX - CUOTA_MIN) + CUOTA_MIN;
+        double CUOTA_B = CUOTA_MAX - CUOTA_A;
+        double CUOTA_NETFLIX = CUOTA_A + CUOTA_B;
         // Generar dato
-        char letra = (char)(RND.nextInt(LETRA_FIN - LETRA_INI + 1) + LETRA_INI);
 
-        System.out.printf("Letra de inicio de examen .:  %c.%n", letra);
+        System.out.printf("AMIGO_A PAGA: %.2f€%nAMIGO_B PAGA: %.2f€%nCUOTA NETFLIX: %.2f  ", CUOTA_A, CUOTA_B, CUOTA_NETFLIX);
     }
 }
